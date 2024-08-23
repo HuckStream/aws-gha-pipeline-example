@@ -1,0 +1,23 @@
+name: Pipeline
+runtime:
+  name: nodejs
+  options:
+    packagemanager: npm
+description: Pipeline workflow example
+config:
+  aws:region: us-east-1
+  pulumi:tags:
+    value:
+      pulumi:template: aws-typescript
+  namespace:
+    type: string
+    description: Namsepace for resources.
+    default: huckstream
+  environment:
+    type: string
+    description: Environment name.
+    default: sbx
+  name:
+    type: string
+    description: Resource name.
+    default: pipeline-bucket
