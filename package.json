@@ -10,8 +10,11 @@
     "email": "christopher.koning@gmail.com"
   },
   "main": "index.ts",
+  "engines": {
+    "node": "20"
+  },
   "devDependencies": {
-    "@types/node": "^18",
+    "@types/node": "^20",
     "typescript": "^5.0.0"
   },
   "dependencies": {
