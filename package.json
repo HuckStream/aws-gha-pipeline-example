@@ -1,13 +1,25 @@
 {
-    "name": "pipeline",
-    "main": "index.ts",
-    "devDependencies": {
-        "@types/node": "^18",
-        "typescript": "^5.0.0"
-    },
-    "dependencies": {
-        "@pulumi/aws": "^6.0.0",
-        "@pulumi/awsx": "^2.0.2",
-        "@pulumi/pulumi": "^3.113.0"
-    }
+  "name": "Pipeline",
+  "author": "Chris Koning <christopher.koning@gmail.com>",
+  "license": "MPL-2.0",
+  "version": "0.1.0",
+  "description": "A simple example using access controlled environments to deploy resources",
+  "repository": "github:HuckStream/pipeline-example",
+  "bugs": {
+    "url": "https://github.com/HuckStream/pipeline-example/issues",
+    "email": "christopher.koning@gmail.com"
+  },
+  "main": "index.ts",
+  "engines": {
+    "node": "20"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@pulumi/aws": "^6.0.0",
+    "@pulumi/awsx": "^2.0.2",
+    "@pulumi/pulumi": "^3.113.0"
+  }
 }
