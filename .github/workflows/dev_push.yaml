@@ -19,7 +19,7 @@ jobs:
       #     aws-region: ${{ secrets.AWS_REGION }}
       #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       - run: npm install
-      - uses: pulumi/actions@v3
+      - uses: pulumi/actions@v5
         with:
           command: up
           stack-name: HuckStream/Pipeline/dev # When using an individual account, only use stack-name.
