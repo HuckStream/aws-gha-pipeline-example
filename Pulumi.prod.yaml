@@ -1,5 +1,5 @@
 environment:
-  - prod
+  - aws-prod
 config:
   aws:region: us-east-1
   environment: prod

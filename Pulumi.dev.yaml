@@ -1,5 +1,5 @@
 environment:
-  - dev
+  - aws-dev
 config:
   aws:region: us-east-1
   environment: dev
