@@ -1,11 +1,11 @@
-name: Pulumi
+name: Pulumi Preview Dev Update
 on:
   pull_request:
     branches:
       - dev
 jobs:
   preview:
-    name: Preview
+    name: Preview Dev Update
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
