@@ -1,11 +1,11 @@
-name: Pulumi
+name: Pulumi Update Prod
 on:
   push:
     branches:
       - main
 jobs:
   update:
-    name: Update
+    name: Update Prod
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
