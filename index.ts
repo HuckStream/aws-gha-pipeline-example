@@ -3,15 +3,25 @@ import * as aws from "@pulumi/aws";
 import * as awsx from "@pulumi/awsx";
 
 // Assemble resource name from context pieces
-let ctx = new pulumi.Config();
+const ctx = new pulumi.Config();
+const namespace: string = ctx.require("namespace")
+const environment: string = ctx.require("environment")
+const name: string = ctx.require("name")
 const resourceName: string = [
-  ctx.require("namespace"),
-  ctx.require("environment"),
-  ctx.require("name"),
+  namespace,
+  environment,
+  name,
 ].join("-")
 
 // Create an AWS resource (S3 Bucket)
-const bucket = new aws.s3.Bucket( resourceName );
+const bucket = new aws.s3.Bucket( resourceName, {
+  bucket: resourceName,
+  tags: {
+    Namespace: namespace,
+    Environment: environment,
+    Name: resourceName,
+  }
+});
 
 // Export the name of the bucket
 export const bucketName = bucket.id;
