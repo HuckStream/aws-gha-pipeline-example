@@ -20,6 +20,7 @@ const bucket = new aws.s3.Bucket( resourceName, {
     Namespace: namespace,
     Environment: environment,
     Name: resourceName,
+    Owner: "christopher.koning@gmail.com"
   }
 });
 
